@@ -14,10 +14,6 @@ body {
 	font-family: "Roboto", sans-serif;
 }
 
-/* html {
-	padding: 1.5rem;
-} */
-
 @media screen and (max-width: 500px) {
 	html {
 		padding: 1rem;
@@ -27,16 +23,6 @@ body {
 section {
 	margin: 1% 0;
 }
-
-/* body {
-	display: grid;
-	grid-row-gap: 1%;
-} */
-
-/* section:nth-of-type(odd) {
-	/* background: #f1f1f1; */
-/* margin: 2% 0; */
-/* } */
 
 /* ********************************************* */
 /* NAVBAR */
@@ -62,8 +48,6 @@ section {
 	background: -webkit-linear-gradient(to right, #2948ff, #396afc); /* Chrome 10-25, Safari 5.1-6 */
 	background: var(--primaryBlue);
 }
-
-/* @media screen and (max-width: ) {} */
 
 .link {
 	cursor: pointer;
@@ -158,8 +142,6 @@ section {
 .slideshow-header {
 	display: flex;
 	flex-direction: column;
-	/* height: 40%; */
-	/* justify-content: space-evenly; */
 	align-items: center;
 	position: absolute;
 	z-index: 1;
@@ -168,7 +150,6 @@ section {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-transform: uppercase;
-	/* font-size: 3rem; */
 	color: white;
 	text-shadow: 2px 2px slategrey;
 	font-weight: bold;
@@ -183,22 +164,6 @@ section {
 	justify-content: center;
 	align-items: flex-start;
 }
-
-/* .slideshow:after {
-	content: "Aurora Lucis";
-	z-index: 1;
-	opacity: 1;
-	color: white;
-	text-transform: uppercase;
-	font-size: 3rem;
-	text-shadow: 2px 2px slategrey;
-	font-weight: bold;
-	background: rgba(0, 0, 0, 0.4);
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-} */
 
 @media screen and (max-width: 800px) {
 	.slideshow:after {
@@ -231,6 +196,7 @@ section {
 	background-position: center center;
 	z-index: 0;
 	opacity: 0;
+	background-attachment: fixed;
 	-webkit-animation: slideshow 25s linear infinite;
 	-moz-animation: slideshow 25s linear infinite;
 	-o-animation: slideshow 25s linear infinite;
@@ -239,39 +205,29 @@ section {
 
 .slideshow li:nth-child(1) {
 	background-image: url("./imgs/NM.jpg");
-	background-attachment: fixed;
 }
 
 .slideshow li:nth-child(2) {
 	background-image: url("./imgs/Boulder.jpg");
-	background-attachment: fixed;
 	animation-delay: 5s;
 }
 
 .slideshow li:nth-child(3) {
 	background-image: url("./imgs/Eclipse.jpg");
-	background-attachment: fixed;
 	animation-delay: 10s;
 }
 
-/* .slideshow li:nth-child(4) {
-	background-image: url("./imgs/pikes2.jpg");
-	animation-delay: 15s;
-} */
-
 .slideshow li:nth-child(4) {
 	background-image: url("./imgs/pikes1.jpg");
-	background-attachment: fixed;
 	animation-delay: 15s;
 }
 
 .slideshow li:nth-child(5) {
 	background-image: url("./imgs/Volcano.jpg");
-	background-attachment: fixed;
 	animation-delay: 20s;
 }
 
-.test1 {
+/* .test1 {
 	margin-top: 30px;
 	background: url("./imgs/pikes1.jpg");
 	background-attachment: fixed;
@@ -289,7 +245,7 @@ section {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
+} */
 
 .header {
 	animation: fadeIn 1s;
@@ -364,34 +320,6 @@ section {
 	}
 }
 
-/* .slideshow li:nth-child(4) {
-	background-image: url("./imgs/golden.jpg");
-	animation-delay: 15s;
-}
-
-.slideshow li:nth-child(3) {
-	background-image: url("./imgs/panorama_pikes.jpg");
-	animation-delay: 10s;
-}
-.slideshow li:nth-child(11) {
-	background-image: url("./imgs/Ward.jpg");
-	animation-delay: 50s;
-}
-
-.slideshow li:nth-child(3) {
-	background-image: url("./imgs/crip.jpg");
-	animation-delay: 10s;
-}
-
-.slideshow li:nth-child(11) {
-	background-image: url("./imgs/tex.jpg");
-	animation-delay: 40s;
-}
-.slideshow li:nth-child(12) {
-	background-image: url("./imgs/pikes_sun.jpg");
-	animation-delay: 55s;
-} */
-
 @keyframes slideshow {
 	0% {
 		opacity: 0;
@@ -407,43 +335,6 @@ section {
 	30% {
 		opacity: 0;
 	}
-
-	/* 0% {
-		background-image: url("./imgs/NM.jpg");
-	}
-	9% {
-		background-image: url("./imgs/Boulder.jpg");
-	}
-	18% {
-		background-image: url("./imgs/crip.jpg");
-	}
-	27% {
-		background-image: url("./imgs/golden.jpg");
-	}
-	36% {
-		background-image: url("./imgs/panorama_pikes.jpg");
-	}
-	45% {
-		background-image: url("./imgs/pikes_sun.jpg");
-	}
-	54% {
-		background-image: url("./imgs/pikes1.jpg");
-	}
-	63% {
-		background-image: url("./imgs/pikes2.jpg");
-	}
-	72% {
-		background-image: url("./imgs/tex.jpg");
-	}
-	81% {
-		background-image: url("./imgs/Ward.jpg");
-	}
-	90% {
-		background-image: url("./imgs/Eclipse.jpg");
-	}
-	100% {
-		background-image: url("./imgs/Volcano.jpg");
-	} */
 }
 
 /* ********************************************* */
@@ -474,7 +365,6 @@ section {
 	animation: slideleft 0.5s ease-in-out;
 }
 .summary {
-	/* background-color: blueviolet; */
 	color: white;
 	padding: 3%;
 }
@@ -533,10 +423,7 @@ i {
 }
 /* ********************************************* */
 /* VALUES */
-/* /* *********************************************
-.value-props {
-	/* ui gradients */
-/* } */
+/* /* ********************************************* */
 .prop-container {
 	display: grid;
 	list-style: none;
@@ -590,44 +477,23 @@ i {
 	position: absolute; /* visibility: hidden; */
 	top: 50%;
 	left: 50%;
-	/* background-color: #28a745; */
-	/* border-color: #28a745; */
 	transform: translate(-50%, -50%);
-	/* Alert class (BS) */
-	/* position: relative; */
 	padding: 1.5rem 2.5rem;
 	margin-bottom: 1rem;
 	border: 1px solid transparent;
 	border-radius: .25rem;
-	/* Alert-success class */
 	color: #155724;
 	background-color: #d4edda;
 	border-color: #c3e6cb;
 }
-/* .contact-form form {
-	display: flex;
-	flex-direction: column;
-	width: 80%;
-	margin: 2rem auto;
-	padding: 2rem;
-	color: white;
-} */
-/* .contact-form .form-group,
-textarea {
-	width: 80%;
-	margin: 0 auto;
-} */
 textarea {
 	resize: none;
 	font-family: "Roboto";
 }
 input[type="email"] {
-	/* width: 50%; */
-	/* margin-bottom: 2rem; */
 	padding: 0.6rem;
 	box-shadow: 2px 2px lightslategrey;
 	outline: none;
-	/* border: none; */
 }
 /* input:invalid {
 	background: red;
@@ -637,14 +503,6 @@ input:valid {
 } */
 #submit-btn {
 	outline: none;
-	/* border: none;
-	padding: 1rem;
-	text-align: center;
-	cursor: pointer;
-	margin: 2rem auto;
-	width: 50%;
-	background: gray;
-	color: white; */
 	font-size: 1.3rem;
 	font-weight: bold;
 	border: none;
