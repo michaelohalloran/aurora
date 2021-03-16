@@ -20,8 +20,13 @@ body {
 	}
 }
 
-section {
+section:not(:first-of-type) {
 	margin: 1% 0;
+}
+
+ul {
+	/* fix reboot.scss */
+	margin-bottom: 0;
 }
 
 /* ********************************************* */
@@ -94,7 +99,6 @@ section {
 /* ********************************************* */
 .slideshow-container {
 	height: 90vh;
-	margin: 1rem 0;
 	position: relative;
 }
 
@@ -204,26 +208,38 @@ section {
 }
 
 .slideshow li:nth-child(1) {
-	background-image: url("./imgs/NM.jpg");
+	/* background-image: url("./imgs/NM.jpg"); */
+	/* https://www.pexels.com/photo/silhouette-of-mountains-1323550/ */
+	/* background-image: url('https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg'); */
+	background-image: url('./imgs/mtn-sunrise.jpg');
 }
 
 .slideshow li:nth-child(2) {
-	background-image: url("./imgs/Boulder.jpg");
+	/* https://www.pexels.com/photo/scenic-view-of-mountains-during-dawn-1266810/ */
+	/* background-image: url("./imgs/Boulder.jpg"); */
+	background-image: url('./imgs/mtn-2.jpg');
 	animation-delay: 5s;
 }
 
 .slideshow li:nth-child(3) {
-	background-image: url("./imgs/Eclipse.jpg");
+	/* background-image: url("./imgs/Eclipse.jpg"); */
+	/* https://www.pexels.com/photo/dock-under-cloudy-sky-in-front-of-mountain-206359/ */
+	background-image: url('./imgs/mtn-3.jpg');
 	animation-delay: 10s;
 }
 
 .slideshow li:nth-child(4) {
-	background-image: url("./imgs/pikes1.jpg");
+	/* background-image: url("./imgs/pikes1.jpg"); */
+	/* https://www.pexels.com/photo/scenic-photo-of-rocky-mountain-during-golden-hour-2440078/ */
+	background-image: url('./imgs/mtn-4.jpg');
 	animation-delay: 15s;
 }
 
 .slideshow li:nth-child(5) {
-	background-image: url("./imgs/Volcano.jpg");
+	/* background-image: url("./imgs/Volcano.jpg"); */
+	/* https://www.pexels.com/photo/green-tall-trees-with-view-of-mountain-and-sun-peeking-through-163255/ */
+	background-image: url('./imgs/mtn-5.jpg');
+	/* https://www.pexels.com/photo/village-in-front-of-the-mountains-2175952/ */
 	animation-delay: 20s;
 }
 
@@ -356,13 +372,12 @@ section {
 .section-desc {
 	text-align: center;
 	font-weight: bold;
-	animation: slideleft 0.5s ease-in-out;
 }
 .animate-text-right {
-	animation: slideright 0.5s ease-in-out;
+	animation: slideright 1s ease-in-out;
 }
 .animate-text-left {
-	animation: slideleft 0.5s ease-in-out;
+	animation: slideleft 1s ease-in-out;
 }
 .summary {
 	color: white;
@@ -400,6 +415,9 @@ i {
 }
 .feature-container:last-child {
 	border: none;
+}
+.feature-paragraph {
+	letter-spacing: 0.15rem;
 }
 .scroll-elements {
 	opacity: 0;

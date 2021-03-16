@@ -15,10 +15,17 @@ function scrollAppear() {
 	const sections = document.querySelectorAll('.section-desc');
 	sections.forEach((el, idx) => {
 		const textPosition = el.getBoundingClientRect().top;
-		if (textPosition < screenPosition) {
+		if (textPosition + 100 < screenPosition) {
 			console.log(`text ${textPosition} -- screen ${screenPosition}`);
-			const animationClass = idx%2 === 0 ? 'text-animation-right' : 'text-animation-left';
-			el.classList.add(animationClass);
+			const elementClassList = Array.from(el.classList);
+			// if (elementClassList.includes('animate-text-right')) {
+			// 	el.classList.remove('animate-text-right');
+			// }
+			// const animationClass = idx%2 === 0 ? 'animate-text-right' : 'animate-text-left';
+			// el.classList.add('animate-text-right');
+			if (Array.from(el.classList).includes('fadeAnimation')) {
+				el.classList.remove('fadeAnimation');
+			}
 			el.classList.add('fadeAnimation');
 		}
 	})
