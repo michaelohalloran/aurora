@@ -15,7 +15,7 @@ function scrollAppear() {
 	const sections = document.querySelectorAll('.section-desc');
 	sections.forEach((el, idx) => {
 		const textPosition = el.getBoundingClientRect().top;
-		if (textPosition + 100 < screenPosition) {
+		if (textPosition + 200 < screenPosition) {
 			console.log(`text ${textPosition} -- screen ${screenPosition}`);
 			const elementClassList = Array.from(el.classList);
 			// if (elementClassList.includes('animate-text-right')) {
@@ -23,10 +23,10 @@ function scrollAppear() {
 			// }
 			// const animationClass = idx%2 === 0 ? 'animate-text-right' : 'animate-text-left';
 			// el.classList.add('animate-text-right');
-			if (Array.from(el.classList).includes('fadeAnimation')) {
-				el.classList.remove('fadeAnimation');
-			}
-			el.classList.add('fadeAnimation');
+			// if (Array.from(el.classList).includes('fadeAnimation')) {
+			// 	el.classList.remove('fadeAnimation');
+			// }
+			// el.classList.add('fadeAnimation');
 		}
 	})
 }

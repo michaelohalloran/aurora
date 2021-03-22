@@ -394,6 +394,28 @@ ul {
 /* ********************************************* */
 /* FEATURES */
 /* ********************************************* */
+.img-break {
+	position: relative;
+	height: 60vh;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-image: url('./imgs/mtn-6.jpg');
+}
+.img-break .section-desc {
+	color: white;
+	background: transparent;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/* background: var(--primaryBlue); */
+	/* grid-column: 1 / -1; */
+	/* margin-bottom: 0; */
+	/* padding: 2rem; */
+}
 .features {
 	display: grid;
 	grid-gap: 3px;
