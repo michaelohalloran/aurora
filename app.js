@@ -1,4 +1,4 @@
-console.log("connected");
+// console.log("connected");
 
 /**
  * Scroll animation
@@ -16,7 +16,7 @@ function scrollAppear() {
 	sections.forEach((el, idx) => {
 		const textPosition = el.getBoundingClientRect().top;
 		if (textPosition + 200 < screenPosition) {
-			console.log(`text ${textPosition} -- screen ${screenPosition}`);
+			// console.log(`text ${textPosition} -- screen ${screenPosition}`);
 			const elementClassList = Array.from(el.classList);
 			// if (elementClassList.includes('animate-text-right')) {
 			// 	el.classList.remove('animate-text-right');

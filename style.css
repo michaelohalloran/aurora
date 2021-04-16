@@ -20,13 +20,24 @@ body {
 	}
 }
 
-section:not(:first-of-type) {
-	margin: 1% 0;
+h1 {
+	font-size: 4rem;
+}
+
+h3 {
+	font-size: 2.5rem;
+}
+
+@media screen and (max-width: 900px) {
+	h3 {
+		font-size: x-large;
+	}
 }
 
 ul {
 	/* fix reboot.scss */
 	margin-bottom: 0;
+	list-style: none;
 }
 
 /* ********************************************* */
@@ -102,7 +113,7 @@ ul {
 	position: relative;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 900px) {
 	.slideshow-container {
 		margin: 0;
 		height: 400px;
@@ -372,6 +383,7 @@ ul {
 .section-desc {
 	text-align: center;
 	font-weight: bold;
+	text-shadow: rgba(0, 0, 0, 0.6) 3px 4px 2px;
 }
 .animate-text-right {
 	animation: slideright 1s ease-in-out;
@@ -381,11 +393,55 @@ ul {
 }
 .summary {
 	color: white;
-	padding: 3%;
+	padding: 5%;
+}
+.why-list {
+	display: flex;
+	flex-direction: column;
+	line-height: 3.5rem;
+	font-size: 1.5rem;
+	align-items: center;
+	word-spacing: 0.5rem;
+	letter-spacing: 0.1rem;
+}
+.emphasis {
+	/* -webkit-text-stroke: 2px #b2aec3; */
+	text-transform: uppercase;
+	text-shadow: 3px 3px #352f2f;
+}
+/* li::first-letter {
+	font-size: 1.3rem;
+} */
+@media screen and (max-width: 900px) {
+	.why-list {
+		font-size: 1rem;
+		line-height: 2.5rem;
+	}
+	.link {
+		width: 100%;
+	}
+	.link a {
+		font-size: small;
+	}
+}
+@media screen and (max-width: 600px) {
+	.why-list {
+		font-size: small;
+		word-spacing: 0;
+		letter-spacing: 0;
+		line-height: 2rem;
+	}
 }
 @media screen and (max-width: 500px) {
 	.summary {
 		font-size: small;
+	}
+	.why-list {
+		font-size: x-small;
+	}
+	.emphasis {
+		text-shadow: 2px 1px #352f2f;
+		font-size: smaller;
 	}
 	.section-desc {
 		font-size: medium;
@@ -402,7 +458,13 @@ ul {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
+}
+.break-1 {
 	background-image: url('./imgs/mtn-6.jpg');
+}
+.break-2 {
+	/* https://www.pexels.com/photo/green-trees-under-blue-and-orange-sky-during-sunset-1107717/ */
+	background-image: url('./imgs/mtn-7.jpg');
 }
 .img-break .section-desc {
 	color: white;
@@ -483,7 +545,7 @@ i {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	margin: 2rem auto;
+	/* margin: 2rem auto; */
 	margin-bottom: 0;
 	padding: 2rem;
 	color: white;
