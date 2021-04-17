@@ -512,7 +512,12 @@ i {
 	opacity: 1;
 	transform: translateY(0) scale(1);
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 900px) {
+	.img-break {
+		height: 35vh;
+	}
+}
+@media screen and (max-width: 550px) {
 	.features {
 		grid-template-columns: 1fr;
 	}
@@ -521,6 +526,7 @@ i {
 	}
 	.feature-container {
 		font-size: small;
+		padding: 5%;
 	}
 }
 /* ********************************************* */

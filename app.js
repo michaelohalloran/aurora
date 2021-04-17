@@ -95,12 +95,34 @@ form.addEventListener('submit', evt => {
 	//TODO: nodeMailer
 	const formValid = Object.values(isFormValid).every(val => !!val);
 	if (formValid) {
-		// TODO: add submission to backend here
-		hideFormElements();
-		showSuccessMsg();
-		console.log('Valid form: ', {name: nameField.value, email: email.value, msg: msg.value});
+		evt.preventDefault();
+		const formData = {name: nameField.value, email: email.value, msg: msg.value};
+		submitForm(formData);
+		console.log('Valid form: ', formData);
 	}
 });
+
+function submitForm(formData) {
+	const {name, email, msg} = formData;
+	fetch("https://formsubmit.co/ajax/e786f99ce0cb24956c2fb13244a20252", {
+    method: "POST",
+    headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: JSON.stringify({name, email, msg})
+})
+    .then(response => response.json())
+    .then(data => {
+		if (data) {
+			hideFormElements();
+			showSuccessMsg();
+		}
+	})
+    .catch(error => {
+		// TODO: add error in UI 'Something went wrong, please try again later'
+	});
+}
 
 function hideFormElements() {
 	const formGroups = document.getElementsByClassName('form-group');
