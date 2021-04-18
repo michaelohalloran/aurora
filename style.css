@@ -35,7 +35,6 @@ h3 {
 }
 
 ul {
-	/* fix reboot.scss */
 	margin-bottom: 0;
 	list-style: none;
 }
@@ -43,18 +42,6 @@ ul {
 /* ********************************************* */
 /* NAVBAR */
 /* ********************************************* */
-/* .navbar { */
-/* background-color: var(--primaryOrange); */
-
-/* To make it stick to top:
-	 padding: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin-bottom: 56px;
-    z-index: 2; */
-/* } */
 
 .links {
 	list-style: none;
@@ -254,26 +241,6 @@ ul {
 	animation-delay: 20s;
 }
 
-/* .test1 {
-	margin-top: 30px;
-	background: url("./imgs/pikes1.jpg");
-	background-attachment: fixed;
-	min-height: 30vh;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.test2 {
-	background-image: url("./imgs/pikes1.jpg");
-	background-attachment: fixed;
-	min-height: 30vh;
-	margin-bottom: 30px;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-} */
-
 .header {
 	animation: fadeIn 1s;
 }
@@ -405,13 +372,9 @@ ul {
 	letter-spacing: 0.1rem;
 }
 .emphasis {
-	/* -webkit-text-stroke: 2px #b2aec3; */
 	text-transform: uppercase;
 	text-shadow: 3px 3px #352f2f;
 }
-/* li::first-letter {
-	font-size: 1.3rem;
-} */
 @media screen and (max-width: 900px) {
 	.why-list {
 		font-size: 1rem;
@@ -473,10 +436,6 @@ ul {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	/* background: var(--primaryBlue); */
-	/* grid-column: 1 / -1; */
-	/* margin-bottom: 0; */
-	/* padding: 2rem; */
 }
 .features {
 	display: grid;
@@ -551,7 +510,6 @@ i {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	/* margin: 2rem auto; */
 	margin-bottom: 0;
 	padding: 2rem;
 	color: white;
@@ -580,7 +538,8 @@ i {
 		opacity: 1;
 	}
 }
-.success-msg {
+.success-msg,
+.error-msg {
 	text-align: center;
 	position: absolute; /* visibility: hidden; */
 	top: 50%;
@@ -590,9 +549,16 @@ i {
 	margin-bottom: 1rem;
 	border: 1px solid transparent;
 	border-radius: .25rem;
+}
+.success-msg {
 	color: #155724;
 	background-color: #d4edda;
 	border-color: #c3e6cb;
+}
+.error-msg {
+	color: #842029;
+	background-color: #f8d7da;
+	border-color: #f5c2c7;
 }
 textarea {
 	resize: none;
@@ -603,12 +569,6 @@ input[type="email"] {
 	box-shadow: 2px 2px lightslategrey;
 	outline: none;
 }
-/* input:invalid {
-	background: red;
-}
-input:valid {
-	background: green;
-} */
 #submit-btn {
 	outline: none;
 	font-size: 1.3rem;
