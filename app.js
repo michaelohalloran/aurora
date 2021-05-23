@@ -1,17 +1,23 @@
-
 /**
  * Scroll animation
  */
 function scrollAppear() {
 	const screenPosition = window.innerHeight;
 	const scrollAnimateElements = document.querySelectorAll('.scroll-elements');
-	scrollAnimateElements.forEach(el => {
-		const imgPosition = el.getBoundingClientRect().top;
-		if (imgPosition < screenPosition) {
-			el.classList.add('scroll-appear');
-		}
-	});
+	const allAppeared = Array.from(scrollAnimateElements).every(el => el.classList.contains('scroll-appear'));
+	if (allAppeared) {
+		window.removeEventListener('scroll', debouncedScroller);
+	} else {
+		scrollAnimateElements.forEach(el => {
+			const imgPosition = el.getBoundingClientRect().top;
+			if (imgPosition < screenPosition) {
+				el.classList.add('scroll-appear');
+			}
+		});
+	}
 }
+
+const debouncedScroller = debounce(scrollAppear);
 
 // https://www.freecodecamp.org/news/javascript-debounce-example/
 function debounce(func, timeout = 100) {
@@ -21,11 +27,13 @@ function debounce(func, timeout = 100) {
 		// 	func.apply(this, args);
 		// }
 		clearTimeout(timer);
-		timer = setTimeout(() => {func.apply(this, args); }, timeout);
+		timer = setTimeout(() => {
+			func.apply(this, args); 
+		}, timeout);
 	}
 }
 
-window.addEventListener('scroll', debounce(scrollAppear));
+window.addEventListener('scroll', debouncedScroller);
 
 
 // capture form submission, send via node to email

@@ -122,10 +122,6 @@ ul {
 		height: 250px;
 	}
 
-	.slideshow li {
-		background-size: contain;
-	}
-
 	.slideshow-header {
 		font-size: small;
 		width: max-content;
@@ -206,7 +202,6 @@ ul {
 }
 
 .slideshow li:nth-child(1) {
-	/* background-image: url("./imgs/NM.jpg"); */
 	/* https://www.pexels.com/photo/silhouette-of-mountains-1323550/ */
 	/* background-image: url('https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg'); */
 	background-image: url('./imgs/mtn-sunrise.jpg');
@@ -214,29 +209,25 @@ ul {
 
 .slideshow li:nth-child(2) {
 	/* https://www.pexels.com/photo/scenic-view-of-mountains-during-dawn-1266810/ */
-	/* background-image: url("./imgs/Boulder.jpg"); */
-	background-image: url('./imgs/mtn-2.jpg');
+	background-image: url('./imgs/mtn-2-sm.jpg');
 	animation-delay: 5s;
 }
 
 .slideshow li:nth-child(3) {
-	/* background-image: url("./imgs/Eclipse.jpg"); */
 	/* https://www.pexels.com/photo/dock-under-cloudy-sky-in-front-of-mountain-206359/ */
 	background-image: url('./imgs/mtn-3.jpg');
 	animation-delay: 10s;
 }
 
 .slideshow li:nth-child(4) {
-	/* background-image: url("./imgs/pikes1.jpg"); */
 	/* https://www.pexels.com/photo/scenic-photo-of-rocky-mountain-during-golden-hour-2440078/ */
-	background-image: url('./imgs/mtn-4.jpg');
+	background-image: url('./imgs/mtn-4-sm.jpg');
 	animation-delay: 15s;
 }
 
 .slideshow li:nth-child(5) {
-	/* background-image: url("./imgs/Volcano.jpg"); */
 	/* https://www.pexels.com/photo/green-tall-trees-with-view-of-mountain-and-sun-peeking-through-163255/ */
-	background-image: url('./imgs/mtn-5.jpg');
+	background-image: url('./imgs/mtn-5-sm.jpg');
 	/* https://www.pexels.com/photo/village-in-front-of-the-mountains-2175952/ */
 	animation-delay: 20s;
 }
@@ -423,11 +414,12 @@ ul {
 	background-attachment: fixed;
 }
 .break-1 {
-	background-image: url('./imgs/mtn-6.jpg');
+	background-image: url('./imgs/mtn-6-sm.jpg');
 }
 .break-2 {
 	/* https://www.pexels.com/photo/green-trees-under-blue-and-orange-sky-during-sunset-1107717/ */
-	background-image: url('./imgs/mtn-7.jpg');
+	/* background-image: url('./imgs/mtn-7.jpg'); */
+	background-image: url('./imgs/mtn-7-sm.jpg');
 }
 .img-break .section-desc {
 	color: white;
@@ -487,19 +479,6 @@ i {
 		font-size: small;
 		padding: 5%;
 	}
-}
-/* ********************************************* */
-/* VALUES */
-/* /* ********************************************* */
-.prop-container {
-	display: grid;
-	list-style: none;
-	background-color: green; /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 5px;
-}
-.prop {
-	background: yellow;
 }
 /* ********************************************* */
 /* CONTACT */
